@@ -39,11 +39,10 @@ console.log("gcd(1.5,3)" + gcd(1.5, 3));
 //console.log(gcd(-3, 9));
 
 //randomStudent()
-var students = ["a", "b", "c", "d", "e"]
+var students = ["april", "boy", "carl", "dudette", "elaine"]
 var student_osis = [1, 2, 3, 4, 5]
 var random_num = function(){
-    student_length= students.length;
-    rand_num = Math.round(Math.random()*student_length);
+    rand_num = Math.floor(Math.random()*students.length);
     return rand_num;
 };
 
@@ -53,6 +52,7 @@ var randomStudent = function(){
 };
 
 //12.06.17
+/*
 var buttonCallback = function(e){
     console.log("\n\nhere comes e...");
     console.log(e);
@@ -64,4 +64,28 @@ var b = document.getElementById('b');
 b.addEventListener('click', buttonCallback);
 //buttonCallback passes the code
 //buttonCallback() calls the fxn
+*/
 
+//button for fibonacci
+var fibCallback = function(e){
+    console.log("\ncalculating fibonacci term..");
+    console.log(fibonacci(10));
+};
+var fib = document.getElementById('fib');
+fib.addEventListener('click', fibCallback);
+
+//button for gcd
+var gcdCallback = function(e){
+    console.log("\ncalculating greatest common divisor..");
+    console.log(gcd(14,21));
+};
+var gcdB = document.getElementById('gcd');
+gcdB.addEventListener('click', gcdCallback);
+
+//button for random student
+var randstuCallback = function(e){
+    console.log("\npulling up random student..");
+    console.log(randomStudent());
+};
+var randstu = document.getElementById('randStudent');
+randstu.addEventListener('click', randstuCallback);
