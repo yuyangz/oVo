@@ -42,8 +42,8 @@ console.log("gcd(1.5,3)" + gcd(1.5, 3));
 var students = ["a", "b", "c", "d", "e"]
 var student_osis = [1, 2, 3, 4, 5]
 var random_num = function(){
-    student_length= student.length;
-    rand_num = Math.round(Math.random()*student.length());
+    student_length= students.length;
+    rand_num = Math.round(Math.random()*student_length);
     return rand_num;
 };
 
@@ -52,5 +52,16 @@ var randomStudent = function(){
 
 };
 
+//12.06.17
+var buttonCallback = function(e){
+    console.log("\n\nhere comes e...");
+    console.log(e);
+    console.log("\n\nhere comes 'this'");
+    console.log(this);
+};
 
+var b = document.getElementById('b');
+b.addEventListener('click', buttonCallback);
+//buttonCallback passes the code
+//buttonCallback() calls the fxn
 
